@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-//import org.testng.annotations.Test;
 
 public class HomePage {
 
@@ -16,17 +15,31 @@ public class HomePage {
 	//Locators
 	@FindBy (id = "popCloseBox") WebElement popBox;
 	@FindBy (xpath  = "//a[contains(.,'צרו קשר')]") WebElement contact;
-	//@FindBy (xpath = "by.xpath(//li[@linkText='צרו קשר'])[1]") WebElement contact;
-	//@FindBy (id = "sm-16105672433666587-1") WebElement testingTag;
-	//@FindBy (xpath = "//span[@class='sub-arrow'][1]") WebElement subArrow;
+	@FindBy (xpath  = "//*[@id='asb']") WebElement MSGInput;
+	//@FindBy (xpath  = "//input[contains(.,'כתוב כאן ...')]") WebElement MSGInput;	
+	//@FindBy (xpath  = "//input[contains(@id ='asb')][2]") WebElement MSGInput;	
+	//@FindBy (xpath = "//label[starts-with(@id, 'asb')][2]") WebElement MSGInput;	
+	//@FindBy (xpath = "//td[text()='כתוב כאן ...']") WebElement MSGInput;
+	//@FindBy (xpath = "//input[@title='type here and press enter']") WebElement MSGInput;	
+	//@FindBy (xpath = ".//input[ancestor::td[preceding-sibling::th/label[text() = 'הקלד כאן והקש enter']]]") WebElement MSGInput;
+	//@FindBy (xpath = "//input[@id='asb']//input[@type='text']") WebElement MSGInput;	
+	//@FindBy (xpath = "(.//label[text() = 'הקלד כאן והקש enter']/following::input") WebElement MSGInput;	
+	//@FindBy (id = "asb") WebElement MSGInput;	
+
+	//@FindBy (xpath  = "//a[contains(.,'שלח')]") WebElement sendClick;
+
+	@FindBy (xpath  = "//a[contains(.,'בדיקות תוכנה')]") WebElement testingSelect;
+	@FindBy (xpath = "//circle[@id = 'enable-trigger-circle']/following::input") WebElement accessibility;;
+	//@FindBy (xpath  = "//div[@id = 'enable-lang-en'][2]") WebElement usaLng;	
+	@FindBy (xpath = "//a[@href = 'https://svcollege.co.il/%d7%91%d7%9c%d7%95%d7%92-2/'][1]") WebElement magazineBtn;
 
 	//Ctor
-	//כדי להשתמש בלוקייטור שיצרנו בפיינד ביי יש לייחס אותם למחלקה הרלוונטית
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
+	//FUNC
 	public boolean ClosePopFunc() {
 		try {	
 			WebDriverWait wait = new WebDriverWait(driver,40);
@@ -54,16 +67,99 @@ public class HomePage {
 			return false;
 		}
 	}
-	
-	
-	//Function testingTag
-	//public void softwareTesting() {
-	//	driver.findElement(By.id("sm-16105672433666587-1")).sendKeys("בדיקות תוכנה");	
-	//}
 
+	public boolean WaitPop() {
+		WebDriverWait wait = new WebDriverWait(driver,40);
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("popCloseBox")));
+		return true;
+	}
 
-	// כאן -מחלקת עמוד הבית כאן נמצאים כל הלוקייטורים ומתבצעות כל הפעולות
-	// כפתור QA וזיבל
+	public boolean WriteMSGPopFunc(String textTmp) {
+		try {	
+			System.out.println("Contact before WriteMSGPopFunc");
+			MSGInput.sendKeys(textTmp);
+			try {Thread.sleep(10000);} catch (InterruptedException e) {e.printStackTrace();}
+			System.out.println("Contact after WriteMSGPopFunc");
+			return true;
+		}
+		catch (Exception e) {
+			System.out.println("Can't Click on WriteMSGPopFunc");
+			e.printStackTrace();
+			return false;
+		}
+	}
 
+	/*
+	public boolean SendClickFunc() {
 
+		try {
+			System.out.println("Contact before SendClickFunc"); 
+			sendClick.click();
+			System.out.println("Contact after SendClickFunc"); 
+			return true; 
+			} 
+		catch (Exception e) {
+			System.out.println("Can't Click on SendClickFunc");
+			e.printStackTrace(); 
+			return false; 
+		} 
+	}
+	 */
+
+	public boolean TestingSelectFunc() {
+		try {
+			System.out.println("before TestingSelectFunc"); 
+			testingSelect.click();
+			System.out.println("after TestingSelectFunc"); 
+			return true; 
+		} 
+		catch (Exception e) {
+			System.out.println("Can't Click on TestingSelectFunc");
+			e.printStackTrace(); 
+			return false; 
+		} 
+	}
+
+	public boolean AccessibilityFunc() {
+		try {
+			System.out.println("before AccessibilityBtn"); 
+			accessibility.click();
+			System.out.println("after AccessibilityBtn"); 
+			return true; 
+		} 
+		catch (Exception e) {
+			System.out.println("Can't Click on AccessibilityBtn");
+			e.printStackTrace(); 
+			return false;
+		}
+	}
+	/*
+		public boolean LanguageFunc() {
+			try {
+				System.out.println("before LanguageFunc"); 
+				usaLng.click();
+				System.out.println("after LanguageFunc"); 
+				return true; 
+			} 
+			catch (Exception e) {
+				System.out.println("Can't Click on LanguageFunc");
+				e.printStackTrace(); 
+				return false;
+			}
+	}
+	 */
+
+	public boolean MagazineSvcFunc() {
+		try {
+			System.out.println("before MagazineSVCFunc"); 
+			magazineBtn.click();
+			System.out.println("after MagazineSVCFunc"); 
+			return true; 
+		} 
+		catch (Exception e) {
+			System.out.println("Can't Click on MagazineSVCFunc");
+			e.printStackTrace(); 
+			return false;
+		}
+	}
 }

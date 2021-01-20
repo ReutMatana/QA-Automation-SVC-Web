@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeEachTest"/>
           <include name="afterEachTest"/>
-          <include name="ClosePop"/>
+          <include name="MagazineSvcBtn"/>
         </methods>
       </class> <!-- FinalProject.FinalProject.Tests -->
     </classes>
