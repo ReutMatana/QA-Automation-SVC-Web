@@ -20,7 +20,7 @@ public class Tests {
 	@BeforeMethod
 	public void beforeEachTest() {
 		driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.get("https://svcollege.co.il/");
 		hp = new HomePage(driver);
 		ts = new TestingSelect(driver); 
@@ -58,14 +58,24 @@ public class Tests {
 		hp.ClosePopFunc();
 		hp.AccessibilityFunc();
 		//hp.LanguageFunc();
-        //ללחוץ על אלמנט + reset כפתור
+		//ללחוץ על אלמנט + reset כפתור
 	}
 	@Test 
 	public void MagazineSvcBtn() {
 		hp.ClosePopFunc();
 		hp.MagazineSvcFunc();
+		System.out.println("AAA");
 		msvc.CoronaReadMoreFunc();
 		//msvc.LanguageFunc();
-
+	}
+	
+	@Test 
+	public void CounselingCall() {
+		hp.ClosePopFunc();
+		hp.WaitFieldName();
+		hp.FieldNameFunc("רעות");
+		//hp.FieldFhone();
+	//	hp.SendBtn();
 }
+	 
 }

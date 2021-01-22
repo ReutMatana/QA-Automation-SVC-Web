@@ -29,9 +29,10 @@ public class HomePage {
 	//@FindBy (xpath  = "//a[contains(.,'שלח')]") WebElement sendClick;
 
 	@FindBy (xpath  = "//a[contains(.,'בדיקות תוכנה')]") WebElement testingSelect;
-	@FindBy (xpath = "//circle[@id = 'enable-trigger-circle']/following::input") WebElement accessibility;;
+	@FindBy (xpath = "//circle[@id = 'enable-trigger-circle']/following::input") WebElement accessibility;
 	//@FindBy (xpath  = "//div[@id = 'enable-lang-en'][2]") WebElement usaLng;	
 	@FindBy (xpath = "//a[@href = 'https://svcollege.co.il/%d7%91%d7%9c%d7%95%d7%92-2/'][1]") WebElement magazineBtn;
+	@FindBy (xpath  = "//input[contains(.,'form-field-name')][2]") WebElement fieldName;
 
 	//Ctor
 	public HomePage(WebDriver driver) {
@@ -162,4 +163,23 @@ public class HomePage {
 			return false;
 		}
 	}
-}
+
+	public boolean WaitFieldName() {
+			WebDriverWait wait = new WebDriverWait(driver,40);
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("form-field-name")));
+	}
+	public boolean FieldNameFunc() {
+		try {
+			System.out.println("before FieldNameFunc"); 
+			fieldName.click();
+			System.out.println("after FieldNameFunc"); 
+			return true; 
+
+		}
+		catch (Exception e) {
+			System.out.println("FieldNameFunc doesn't respond");
+			e.printStackTrace(); 
+			return false;
+		}
+	}
+}   
