@@ -1,6 +1,7 @@
 package FinalProject.FinalProject;
 
 
+import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,10 +21,11 @@ public class Tests {
 	@BeforeMethod
 	public void beforeEachTest() {
 		driver = new ChromeDriver();
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.get("https://svcollege.co.il/");
 		hp = new HomePage(driver);
 		ts = new TestingSelect(driver); 
+		msvc = new MagazineSvcTag (driver);
 	}
 
 
@@ -57,25 +59,16 @@ public class Tests {
 	public void AccessibilityBtn() {
 		hp.ClosePopFunc();
 		hp.AccessibilityFunc();
-		//hp.LanguageFunc();
-		//ללחוץ על אלמנט + reset כפתור
 	}
 	@Test 
 	public void MagazineSvcBtn() {
 		hp.ClosePopFunc();
 		hp.MagazineSvcFunc();
-		System.out.println("AAA");
-		msvc.CoronaReadMoreFunc();
-		//msvc.LanguageFunc();
+		//msvc.CoronaReadMoreFunc();
 	}
-	
 	@Test 
-	public void CounselingCall() {
+	public void ConsultationCall() {
 		hp.ClosePopFunc();
-		hp.WaitFieldName();
-		hp.FieldNameFunc("רעות");
-		//hp.FieldFhone();
-	//	hp.SendBtn();
-}
-	 
+		hp.FillFieldsFunc("בדיקה","1111","check@");
+	}
 }

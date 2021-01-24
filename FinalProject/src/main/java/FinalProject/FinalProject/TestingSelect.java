@@ -26,31 +26,11 @@ public class TestingSelect {
 
 	//FUNC
 	public boolean CourseQaFunc() {
-		try {	
-			System.out.println("CourseQa before click");
 			courseQa.click();
-			System.out.println("CourseQa after click");
 			return true;
 		} 
-		catch (Exception e) {
-			System.out.println("Cant click on CourseQa");
-			e.printStackTrace();
-			return false;
-		}
-	}
-	
 	public boolean EndCourseFunc() {
-		try {	
-			System.out.println("endCourseBtn before click");
 			endCourseBtn.click();
-			System.out.println("endCourseBtn after click");
 			return true;
-		} 
-		catch (Exception e) {
-			System.out.println("Cant click on endCourseBtn");
-			e.printStackTrace();
-			return false;
-		}
-	}
 }
-	
+}

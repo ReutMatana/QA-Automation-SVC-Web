@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeEachTest"/>
           <include name="afterEachTest"/>
-          <include name="MagazineSvcBtn"/>
+          <include name="SendMSGPop"/>
         </methods>
       </class> <!-- FinalProject.FinalProject.Tests -->
     </classes>

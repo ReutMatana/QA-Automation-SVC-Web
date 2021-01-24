@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Reut\AppData\Local\Temp\testng-eclipse-178620069\testng-customsuite.xml</span>
+                    <span>C:\Users\Reut\AppData\Local\Temp\testng-eclipse-1259485647\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="FinalProject.FinalProject.Tests" class="method navigator-link" hash-for-method="MagazineSvcBtn">MagazineSvcBtn</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="FinalProject.FinalProject.Tests" class="method navigator-link" hash-for-method="SendMSGPop">SendMSGPop</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,11 +127,36 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="MagazineSvcBtn">
-                  </a> <!-- MagazineSvcBtn -->
-                  <span class="method-name">MagazineSvcBtn</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at FinalProject.FinalProject.Tests.MagazineSvcBtn(Tests.java:67)
+                  <a name="SendMSGPop">
+                  </a> <!-- SendMSGPop -->
+                  <span class="method-name">SendMSGPop</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;asb&apos;][2]//input[@type=&apos;text&apos;][71]&quot;}
+  (Session info: chrome=88.0.4324.104)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-UPUHKEP&apos;, ip: &apos;192.168.1.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.104, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Reut\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:60862}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: fa86de07d0e35530f186e6a3b1515248
+*** Element info: {Using=xpath, value=//input[@id=&apos;asb&apos;][2]//input[@type=&apos;text&apos;][71]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.sendKeys(Unknown Source)
+	at FinalProject.FinalProject.HomePage.WriteMSGPopFunc(HomePage.java:67)
+	at FinalProject.FinalProject.Tests.SendMSGPop(Tests.java:48)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -169,7 +194,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Reut\AppData\Local\Temp\testng-eclipse-178620069\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Reut\AppData\Local\Temp\testng-eclipse-1259485647\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -180,7 +205,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;FinalProject.FinalProject.Tests&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;MagazineSvcBtn&quot;/&gt;
+          &lt;include name=&quot;SendMSGPop&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- FinalProject.FinalProject.Tests --&gt;
     &lt;/classes&gt;
@@ -224,14 +249,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'MagazineSvcBtn')
+data.setCell(0, 1, 'SendMSGPop')
 data.setCell(0, 2, 'FinalProject.FinalProject.Tests')
-data.setCell(0, 3, 15237);
+data.setCell(0, 3, 12634);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -246,7 +271,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -254,11 +279,13 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">AccessibilityBtn</span>
                 <br/>
+                <span class="ignored-method-name">ConsultationCall</span>
+                <br/>
+                <span class="ignored-method-name">MagazineSvcBtn</span>
+                <br/>
                 <span class="ignored-method-name">TestingTag</span>
                 <br/>
                 <span class="ignored-method-name">ContactUs</span>
-                <br/>
-                <span class="ignored-method-name">SendMSGPop</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -278,12 +305,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">MagazineSvcBtn</span>
-                <span class="method-start">11735 ms</span>
+                <span class="method-name">SendMSGPop</span>
+                <span class="method-start">9444 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTest</span>
-                <span class="method-start">26977 ms</span>
+                <span class="method-start">22084 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
