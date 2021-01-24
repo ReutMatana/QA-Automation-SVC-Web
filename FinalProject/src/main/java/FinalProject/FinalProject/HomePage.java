@@ -56,23 +56,16 @@ public class HomePage {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("popCloseBox")));
 		return true;
 	}
-	
+	//שליחת הודעה בצא'ט
 	public boolean WriteMSGPopFunc(String textTmp) {
 			System.out.println("before WriteMSGPopFunc");
 			MSGInput.sendKeys(textTmp);
 			try {Thread.sleep(10000);} catch (InterruptedException e) {e.printStackTrace();}
 			System.out.println("after WriteMSGPopFunc");
+			//sendClick.click();
+			//System.out.println("Contact after SendClickFunc"); 
 			return true;
 	}
-	 
-	/*
-	public boolean SendClickFunc() {
-			System.out.println("Contact before SendClickFunc"); 
-			sendClick.click();
-			System.out.println("Contact after SendClickFunc"); 
-			return true; 
-	}
-	 */
 	//"לשונית "בדיקות תוכנה
 	public boolean TestingSelectFunc() {
 		testingSelect.click();
