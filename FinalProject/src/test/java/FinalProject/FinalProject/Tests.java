@@ -1,7 +1,7 @@
 package FinalProject.FinalProject;
 
 
-import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,8 +15,14 @@ public class Tests {
 
 	private WebDriver driver;
 	private HomePage hp;
-	private TestingSelect ts;
+	private QaCourseSelect ts;
+	private AutoCourseSelect acs;
+	private WebAppDevSelcet wad;
+	private ConversionHTTag cht;
+	private AboutSelect as;
 	private MagazineSvcTag msvc;
+	
+
 
 	@BeforeMethod
 	public void beforeEachTest() {
@@ -24,10 +30,13 @@ public class Tests {
 		driver.manage().window().maximize();
 		driver.get("https://svcollege.co.il/");
 		hp = new HomePage(driver);
-		ts = new TestingSelect(driver); 
-		msvc = new MagazineSvcTag (driver);
+		ts = new QaCourseSelect(driver); 
+		acs = new AutoCourseSelect(driver);
+		wad = new WebAppDevSelcet(driver);
+		cht = new ConversionHTTag(driver);
+		as = new AboutSelect(driver);
+		msvc = new MagazineSvcTag(driver);
 	}
-
 
 	@AfterMethod
 	public void afterEachTest() {
@@ -37,38 +46,96 @@ public class Tests {
 	}
 
 	@Test
-	public void ContactUs() {
-		hp.ClosePopFunc();
-		hp.ClickContactFunc();
-		//לפתוח מחלקת צור קשר+ לבדוק שיש התאמה עם המספר טלפון של המכללה
-	}
-	@Test
 	public void SendMSGPop() {
 		hp.WaitPop();
 		hp.WriteMSGPopFunc("בדיקה");
 		//hp.SendClickFunc();
 	}
-	@Test 
-	public void TestingTag() {
-		hp.ClosePopFunc();
-		hp.TestingSelectFunc();
-		ts.CourseQaFunc();
-		ts.EndCourseFunc();
-	}
+
 	@Test 
 	public void AccessibilityBtn() {
 		hp.ClosePopFunc();
 		hp.AccessibilityFunc();
 	}
-	@Test 
-	public void MagazineSvcBtn() {
-		hp.ClosePopFunc();
-		hp.MagazineSvcFunc();
-		//msvc.CoronaReadMoreFunc();
-	}
+
 	@Test 
 	public void ConsultationCall() {
 		hp.ClosePopFunc();
 		hp.FillFieldsFunc("בדיקה","1111","check@");
+	}
+
+	@Test 
+	public void SVCReviews() {
+		hp.ClosePopFunc();
+		hp.ReviewsBottomFunc();
+		as.AyeletReviewFunc();
+	} 
+
+	@Test 
+	public void CourseQaSelect() {
+		hp.ClosePopFunc();
+		hp.TestingSelectFunc();
+		hp.CourseQaFunc();
+		ts.EndCourseFunc();
+	}
+
+	@Test 
+	public void AutoCourseSelect() {
+		hp.ClosePopFunc();
+		hp.TestingSelectFunc();
+		hp.CourseAutoFunc();
+		acs.OnlineAutoFunc();
+	}
+
+	@Test 
+	public void AutoSyllabus() {
+		hp.ClosePopFunc();
+		hp.TestingSelectFunc();
+		hp.CourseAutoFunc();
+		acs.AutoSyllFunc();
+	}
+
+	@Test 
+	public void Details() {
+		hp.ClosePopFunc();
+		hp.TestingSelectFunc();
+		hp.CourseAutoFunc();
+		acs.AutoDetailsFunc();
+	}
+	
+	@Test
+	public void WebAppDev() {
+	hp.ClosePopFunc();
+	hp.DevSelect();
+	wad.CourseContent();
+	}
+	
+	@Test 
+	public void ConversionHighT() {
+		hp.ClosePopFunc();
+		hp.ConversionHighTFunc();
+		cht.TableOfContentsBody();
+	}
+
+	@Test 
+	public void WroteAboutUs() {
+		hp.ClosePopFunc();
+		hp.AboutFunc();
+		as.ArticleMako();
+		
+	}
+	
+	@Test 
+	public void MagazineSvcBtn() {
+		hp.ClosePopFunc();
+		hp.MagazineSvcFunc();
+		msvc.CoronaFunc();
+	}
+
+	@Test
+	public void ContactUs() {
+		hp.ClosePopFunc();
+		hp.ClickContactFunc();
+		// למטה- פרטי הודעה
 	}
 }

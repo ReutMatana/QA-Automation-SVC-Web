@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeEachTest"/>
           <include name="afterEachTest"/>
-          <include name="SendMSGPop"/>
+          <include name="ContactUs"/>
         </methods>
       </class> <!-- FinalProject.FinalProject.Tests -->
     </classes>
