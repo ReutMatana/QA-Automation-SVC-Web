@@ -13,13 +13,13 @@ public class MagazineSvcTag {
 	//Locators
 	@FindBy (xpath = "//article[@class = 'elementor-post elementor-grid-item post-7820 post type-post status-publish format-standard has-post-thumbnail hentry category-1 entry has-media']") WebElement coronaTitle;
 	@FindBy (xpath = "//div[@class = 'elementor-post__text']") WebElement articleGrid;
-	@FindBy (xpath  = "//img[contains(@srcset, 'https://svcollege.co.il/wp-content/uploads/2020/10/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg 640w')]") WebElement onlineCoursesImg;
-	@FindBy (xpath  = "//a[@href = 'https://svcollege.co.il/author/angora/']") WebElement moreInfo;
-	@FindBy (xpath  = "//p[contains(., 'פחות או יותר')]") WebElement bAOrPracticalXText;
-	@FindBy (xpath  = "//a[@href = 'https://svcollege.co.il/%d7%aa%d7%95%d7%90%d7%a8-%d7%a8%d7%90%d7%a9%d7%95%d7%9f-%d7%90%d7%95-%d7%a0%d7%99%d7%a1%d7%99%d7%95%d7%9f-%d7%9e%d7%a2%d7%a9%d7%99/']") WebElement bAOrPracticalXImg;
+	@FindBy (xpath = "//img[contains(@srcset, 'https://svcollege.co.il/wp-content/uploads/2020/10/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg 640w')]") WebElement onlineCoursesImg;
+	@FindBy (xpath = "//a[@href = 'https://svcollege.co.il/author/angora/']") WebElement moreInfo;
+	@FindBy (xpath = "//p[contains(., 'פחות או יותר')]") WebElement bAOrPracticalXText;
+	@FindBy (xpath = "//a[@href = 'https://svcollege.co.il/%d7%aa%d7%95%d7%90%d7%a8-%d7%a8%d7%90%d7%a9%d7%95%d7%9f-%d7%90%d7%95-%d7%a0%d7%99%d7%a1%d7%99%d7%95%d7%9f-%d7%9e%d7%a2%d7%a9%d7%99/']") WebElement bAOrPracticalXImg;
 	@FindBy (xpath = "//div[@class = 'elementor-author-box__name']") WebElement eranHildesheimText;
-	@FindBy (xpath  = "//a[@class = 'elementor-author-box__button elementor-button elementor-size-xs']") WebElement eranHildesheimBtn;
-	
+	@FindBy (xpath = "//a[@class = 'elementor-author-box__button elementor-button elementor-size-xs']") WebElement eranHildesheimBtn;
+
 	//Ctor
 	public MagazineSvcTag(WebDriver HomePage) {
 		this.HomePage = HomePage;
@@ -28,7 +28,7 @@ public class MagazineSvcTag {
 	public void sleepFUNC(int slp) {
 		try {Thread.sleep(slp);} catch (InterruptedException e) {e.printStackTrace();}
 	}
-	//מאמרים- משבר הקורונה
+	//"Magazine SVCollege" Tag - Corona Article
 	public boolean CoronaFunc() {
 		sleepFUNC(1000);
 		coronaTitle.click(); 
@@ -40,8 +40,8 @@ public class MagazineSvcTag {
 		moreInfo.click();
 		return true;
 	}
-	//מאמר- תואר ראשון או ניסיון מעשי?
-		public boolean BAOrPracticalXFunc() {
+	//"Magazine" Tag - 'BA Or Practical Experience?' Article
+	public boolean BAOrPracticalXFunc() {
 		bAOrPracticalXText.click();
 		sleepFUNC(2000);
 		bAOrPracticalXImg.click();
@@ -50,5 +50,5 @@ public class MagazineSvcTag {
 		sleepFUNC(1500);
 		eranHildesheimBtn.click();
 		return true;
-		}
+	}
 }

@@ -6,8 +6,8 @@
       <class name="FinalProject.FinalProject.Tests">
         <methods>
           <include name="beforeEachTest"/>
-          <include name="BAOrPracticalExperienceArticle"/>
           <include name="afterEachTest"/>
+          <include name="QaCourseBox"/>
         </methods>
       </class> <!-- FinalProject.FinalProject.Tests -->
     </classes>

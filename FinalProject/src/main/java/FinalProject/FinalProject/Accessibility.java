@@ -14,15 +14,15 @@ public class Accessibility {
 	@FindBy (id = "enable-lang-en") WebElement usaLng;
 	@FindBy (xpath = "//button[@title = 'Using a large black Cursor'][1]") WebElement blackCursorBtn;
 	@FindBy (xpath = "//button[@class = 'enable-bottomlinks-reset-accessibility']") WebElement resetBtn;	
-		
+
 	//Ctor
-		public Accessibility(WebDriver HomePage) {
-			this.HomePage = HomePage;
-			PageFactory.initElements(HomePage, this);
-		}
-		public void sleepFUNC(int slp) {
-			try {Thread.sleep(slp);} catch (InterruptedException e) {e.printStackTrace();}
-		}
+	public Accessibility(WebDriver HomePage) {
+		this.HomePage = HomePage;
+		PageFactory.initElements(HomePage, this);
+	}
+	public void sleepFUNC(int slp) {
+		try {Thread.sleep(slp);} catch (InterruptedException e) {e.printStackTrace();}
+	}
 	public boolean USALanguage() {
 		usaLng.click();
 		blackCursorBtn.click();

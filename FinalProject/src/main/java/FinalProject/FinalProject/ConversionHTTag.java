@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ConversionHTTag {
 
-
 	private WebDriver driver;
 	private WebDriver HomePage;  
 
@@ -24,7 +23,7 @@ public class ConversionHTTag {
 	public void sleepFUNC(int slp) {
 		try {Thread.sleep(slp);} catch (InterruptedException e) {e.printStackTrace();}
 	}
-	//"תוכן עניינים בעמוד "הסבה להייטק
+	//"Conversion To High-Tech" -Table of Contents
 	public boolean TableOfContentsBody() {
 		tableOfContents.click(); 
 		sleepFUNC(3000);
@@ -33,10 +32,4 @@ public class ConversionHTTag {
 		svcLogo.click();
 		return true;
 	}
-	//"פרטים בעמוד "הסבה להייטק
-	//	public boolean () {
-	//		.click(); 
-	//		sleepFUNC(3000);
-	//		return true;
-//}אפשרי לבנות טסט
 }

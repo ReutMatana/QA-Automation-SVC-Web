@@ -24,8 +24,7 @@ public class WebAppDevSelcet {
 	public void sleepFUNC(int slp) {
 		try {Thread.sleep(slp);} catch (InterruptedException e) {e.printStackTrace();}
 	}
-
-	//Course Web And App Development
+	//"Development" - Content Of Course Web And App
 	public boolean CourseContent() {
 		widgetWrap.click();
 		sleepFUNC(1500);
