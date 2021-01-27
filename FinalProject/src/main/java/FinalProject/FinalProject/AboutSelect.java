@@ -1,12 +1,9 @@
 package FinalProject.FinalProject;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AboutSelect {
 
@@ -17,7 +14,7 @@ public class AboutSelect {
 	@FindBy (xpath  = "//div[contains(., 'תודה, אתם האלופים שנתתם לי את ההזדמנות, הדחיפה והתמיכה!')]") WebElement ayeletTitle;
 	@FindBy (xpath = "//div[@style = 'background-image: url(\"https://svcollege.co.il/wp-content/uploads/2019/04/איילת-אורלוב.jpg\");']") WebElement ayeletagraduates;
 	@FindBy (xpath = "//div[@aria-label = 'סגור (Esc)']") WebElement closeImgAyelet;
-	@FindBy (id = "e3d18d2") WebElement mako;
+	//@FindBy (xpath = "//div[@class, 'elementor-spacer-inner'][3]") WebElement makoInterview;
 	@FindBy (xpath = "//a[@href = 'https://www.mako.co.il/study-career-career/articles/Article-da19f1e95fe2071026.htm?sCh=3d385dd2dd5d4110&pId=1886690599']") WebElement articleMakoBtn;
 	
 	//Ctor
@@ -39,14 +36,11 @@ public class AboutSelect {
 			return true;
 		}
 		
-		//לשונית אודות-מאמר מאקו
+		//לשונית אודות-מאמר ריאיון מאקו
 		public boolean ArticleMako() {
-		System.out.println("before mako");
-		mako.click();
-		System.out.println("after mako");
+		//makoInterview.click();
 		sleepFUNC(2000);
 		articleMakoBtn.click();
-		System.out.println("after articlemako");	
 		return true;
 	}
 		

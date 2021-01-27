@@ -15,6 +15,7 @@ public class Tests {
 
 	private WebDriver driver;
 	private HomePage hp;
+	private Accessibility acc;
 	private QaCourseSelect ts;
 	private AutoCourseSelect acs;
 	private WebAppDevSelcet wad;
@@ -30,6 +31,7 @@ public class Tests {
 		driver.manage().window().maximize();
 		driver.get("https://svcollege.co.il/");
 		hp = new HomePage(driver);
+		acc = new Accessibility(driver);
 		ts = new QaCourseSelect(driver); 
 		acs = new AutoCourseSelect(driver);
 		wad = new WebAppDevSelcet(driver);
@@ -56,8 +58,16 @@ public class Tests {
 	public void AccessibilityBtn() {
 		hp.ClosePopFunc();
 		hp.AccessibilityFunc();
+		acc.USALanguage();
 	}
 
+	@Test 
+	public void QuickContactBtn() {
+		hp.ClosePopFunc();
+		hp.QuickContactFunc();
+		hp.FillFieldsWin("בדיקה בדיקה","check2@","11112222");
+	}
+	
 	@Test 
 	public void ConsultationCall() {
 		hp.ClosePopFunc();
@@ -122,14 +132,20 @@ public class Tests {
 		hp.ClosePopFunc();
 		hp.AboutFunc();
 		as.ArticleMako();
-		
 	}
 	
 	@Test 
-	public void MagazineSvcBtn() {
+	public void CoronaArticle() {
 		hp.ClosePopFunc();
 		hp.MagazineSvcFunc();
 		msvc.CoronaFunc();
+	}
+
+	@Test 
+	public void BAOrPracticalExperienceArticle() {
+		hp.ClosePopFunc();
+		hp.MagazineSvcFunc();
+		msvc.BAOrPracticalXFunc();
 	}
 
 	@Test
